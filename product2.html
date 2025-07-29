@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+    <!--================Nav-bar===================  -->
+
+<nav class="navbar">
+  <div class="logo">FlexFuel</div>
+  <div class="menu-btn" id="menuBtn">&#9776;</div>
+   
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="workout.html ">Workouts</a></li>
+    <li><a href="memeber_Ship.html">Membership</a></li>
+    <li><a href="store.html" class="btn" >Supplements</a></li>
+    <li><a href="Diet.html" >Diet-Plan</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="auth-buttons">
+    <a href="loginForm.html" class="login-btn">Login</a>
+    <a href="loginForm.html" class="signup-btn">Sign Up</a>
+  </div>
+</nav>
+
+
+  <!-- Product Header -->
+  <section class="product-header">
+    <img src="images/whey2.webp" alt="Whey Protein" class="product-img"/>
+    <h1>Body Fortress Whey Protein</h1>
+    <p>Top-selling protein with isolate, concentrate & hydrolyzed blend. Great for lean muscle and recovery.</p>
+  </section>
+
+
+    <div class="tabs">
+  <button class="tab-link active" onclick="openTab(event, 'overview')">Overview</button>
+  <button class="tab-link" onclick="openTab(event, 'nutrition')">Nutrition</button>
+  <button class="tab-link" onclick="openTab(event, 'tips')">Buying Tips</button>
+</div>
+
+<div class="tab-content active" id="overview">
+  <h2>Overview</h2>
+  <p>Body Fortress Premium Whey Protein helps support lean muscle and strength...</p>
+</div>
+
+<div class="tab-content active" id="nutrition" style="display: none;">
+  <h2>Nutrition Facts</h2>
+  <ul>
+    <li>Protein: 30g</li>
+    <li>Calories: 200</li>
+    <li>BCAAs: 6g</li>
+    <li>Creatine: 1.5g</li>
+    <li>Fat: 4g, Sugar: 1g, Carbs: 8g</li>
+  </ul>
+</div>
+
+<div class="tab-content active" id="tips" style="display: none;">
+  <h2>Buying Tips</h2>
+  <p>Best used post-workout. Mix with water or milk. Can be stacked with creatine...</p>
+</div>
+
+  <!-- ======================Menu_btn=============== -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+console.log("menuBtn:", menuBtn);
+    console.log("navLinks:", navLinks);
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    </script>
+<script src="product2.js"></script>
+</body>
+</html>

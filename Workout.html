@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+      body{
+        background-color: black;
+      }
+    </style>
+</head>
+
+<body>
+
+<!--================Nav-bar===================  -->
+
+<nav class="navbar">
+  <div class="logo">FlexFuel</div>
+<div class="menu-btn" id="menuBtn">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="workout.html" class="btn">Workouts</a></li>
+ <li><a href="memeber_Ship.html" >MemberShip</a></li>
+    <li><a href="store.html" >Supplements</a></li>
+    <li><a href="Diet.html">Plans</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="auth-buttons">
+    <a href="loginForm.html" class="login-btn">Login</a>
+    <a href="loginForm.html" class="signup-btn">Sign Up</a>
+  </div>
+</nav>
+
+
+<!-- ====================Workout-Section================ -->
+  <main class="workout-main">
+    <h1>Choose a Muscle Group</h1>
+    <div id="muscle-buttons" class="btn-group"></div>
+
+    <h2>Exercises</h2>
+    <div id="exercise-list" class="exercise-container"></div>
+    <!-- <div class="secondPart"></div> -->
+  </main>
+
+ <!-- <script>
+  async function getExercisesByMuscleGroup(muscleGroup) {
+  const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${muscleGroup}?limit=12`;
+
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "89c4e8c212mshdfea8f0e78652cfp1c3520jsn010410bc3483", // ✅ Replace with your key
+      "X-RapidAPI-Host": "exercisedb.p.rapidapi.com"
+    }
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const data = await response.json();
+    conxole.log("Fetched Data :" ,data);
+    displayExercises(data);
+  } catch (error) {
+    console.error("API error:", error);
+  }
+}
+ 
+   function displayExercises(exercises) {
+  const list = document.getElementById("exercise-list");
+  list.innerHTML = ""; // Clear previous results
+
+
+  exercises.forEach((exercise) => {
+    console.log("Exercise:",exercise);
+console.log("Image URL:", exercise.gifUrl);
+    const card = document.createElement("div");
+    card.classList.add("exercise-card");
+const imgUrl = exercise.gifUrl || "fallback.jpg";
+
+    card.innerHTML = `
+      <img src="${exercise.gifUrl}" alt="${exercise.name}" class="exercise-img" />
+      <h3>${exercise.name}</h3>
+
+
+      <p><strong>Target:</strong> ${exercise.target}</p>
+      <p><strong>Equipment:</strong> ${exercise.equipment}</p>
+    `;
+
+    list.appendChild(card);
+  });
+}
+
+</script> -->
+
+<!-- ============Menu Btn=============================== -->
+   <script>
+        const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+console.log("menuBtn:", menuBtn);
+    console.log("navLinks:", navLinks);
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    </script>
+
+
+  <script src="workout.js"></script>
+</body>
+</html> 
+
+

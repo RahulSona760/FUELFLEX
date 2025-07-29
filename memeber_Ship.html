@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--================Nav-bar===================  -->
+
+<nav class="navbar">
+  <div class="logo">FlexFuel</div>
+    <div class="menu-btn" id="menuBtn">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="workout.html ">Workouts</a></li>
+    <!-- <li><a href="#about-trainer"> Our Trainer</a></li> -->
+<li><a href="memeber_Ship.html" class="btn" >MemberShip</a></li>
+    <li><a href="store.html">Supplements</a></li>
+    <li><a href="Diet.html">Diet-Plans</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  
+ 
+  <div class="auth-buttons">
+    <a href="loginForm.html" class="login-btn">Login</a>
+    <a href="loginForm.html" class="signup-btn">Sign Up</a>
+  </div>
+  
+</nav>
+
+
+ <section class="pricing-section">
+  <h2>Choose Your Plan</h2>
+  <p>Flexible pricing to match your fitness journey</p>
+
+  <div class="pricing-cards">
+    
+    <!-- Basic Plan -->
+    <div class="card">
+      <h3>Basic</h3>
+      <p class="price">₹999/mo</p>
+      <ul class="features">
+        <li>Gym Access</li>
+        <li>Locker Facility</li>
+        <li>Free Wi-Fi</li>
+      </ul>
+       <a href="membership_Detail.html" class="join-btn">Join Now</a>
+    </div>
+
+    <!-- Standard Plan (Most Popular) -->
+    <div class="card">
+      <div class="badge">★ Most Popular</div>
+      <h3>Standard</h3>
+      <p class="price">₹1,499/mo</p>
+      <ul class="features">
+        <li>Everything in Basic</li>
+        <li>Group Classes</li>
+        <li>1 Personal Training/mo</li>
+      </ul>
+      <a href="membership_Detail.html" class="join-btn">Join Now</a>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="card">
+      <h3>Premium</h3>
+      <p class="price">₹2,499/mo</p>
+      <ul class="features">
+        <li>Unlimited Training</li>
+        <li>Nutrition Plan</li>
+        <li>Bring a Friend Free</li>
+      </ul>
+     <a href="membership_Detail.html" class="join-btn">Join Now</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+        const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+console.log("menuBtn:", menuBtn);
+    console.log("navLinks:", navLinks);
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    </script>
+</body>
+</html>

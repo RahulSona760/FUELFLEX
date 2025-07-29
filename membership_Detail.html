@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===========nav_Bar============= -->
+    <nav class="navbar">
+  <div class="logo">FlexFuel</div>
+  <div class="menu-btn" id="menuBtn">&#9776;</div>
+  
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="workout.html ">Workouts</a></li>
+    <li><a href="memeber_Ship.html">Membership</a></li>
+    <li><a href="store.html">Supplements</a></li>
+    <li><a href="Diet.html" class="btn">Diet-Plans</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="auth-buttons">
+    <a href="loginForm.html" class="login-btn">Login</a>
+    <a href="loginForm.html" class="signup-btn">Sign Up</a>
+  </div>
+</nav>
+
+<section class="memberShip_function">
+  
+        <div class="info">
+            <h2>BILLING DETAILS</h2>
+              <div class="heading-line"></div>
+            <div class="inputDetail">
+            <label for="name">Name</label>
+            <input type="name" id="name" for="name">
+           
+<br><br>
+            <label for="company">Company name(optional)</label>
+            <input type="company" id="company" for="company">
+<br><br>
+
+            <label for="Country">Country/Region</label>
+            <input type="Country" for="Country" placeholder="  India">
+<br><br>
+
+            <label for="street">Street address</label>
+            <input type="stret" placeholder="  House number and street name">
+            <br><br>
+            <input type="stret" placeholder="  Apartment, suite, unite,etc.(optional)">
+            <br><br>
+            <label for="Town">Town/City</label>
+            <input type="Town">
+
+<br><br>
+            <label for="state">State</label>
+            <input type="state" placeholder="  Punjab">
+<br>
+<br>
+            <label for="pin">PIN Code</label>
+            <input type="pin">
+            <button type="submit" class="go-btn">Go to Payment</button>
+        </div>
+        
+        </div>
+
+        <div class="payment_Method">
+            
+        </div>
+  
+</section>
+
+<!-- =============menu_Btn=============== -->
+ </script>
+   <script>
+        const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+console.log("menuBtn:", menuBtn);
+    console.log("navLinks:", navLinks);
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    </script>
+</body>
+</html>

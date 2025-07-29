@@ -1,0 +1,57 @@
+/* api=================== */
+
+
+body{
+    background-image: ;
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.muscle-btn {
+  background-color: #f72585;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.muscle-btn:hover {
+  background-color: #c9185c;
+}
+
+.exercise-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.exercise-card {
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(247, 37, 133, 0.2);
+}
+
+.exercise-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+header .navbar a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}

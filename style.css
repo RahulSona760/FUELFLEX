@@ -1,0 +1,1060 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background: #000;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111111;
+  /* border-radius: 5px; */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+ .menu-btn {
+      font-size: 30px;
+      cursor: pointer;
+      display: none;
+    }
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff4141;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e63b3b;
+}
+
+.auth-buttons a {
+  margin-left: 20px;
+  color: #fff;
+  border: 1px solid  #ff4141;;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.auth-buttons .signup-btn {
+  background-color:  #ff4141;;
+  color: #fff;
+}
+
+.auth-buttons a:hover {
+  opacity: 0.8;
+}
+/* ======================heroo-section=================== */
+.hero {
+  height: 100vh;
+  background: url('images/ChatGPT\ Image\ Jul\ 23\,\ 2025\,\ 09_56_38\ AM.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color:  #ff4141;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #ccc;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color:  #ff4141;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #e63b3b;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid  #ff4141;;
+}
+
+.btn.secondary:hover {
+  background-color: #e63b3b;
+}
+ /* ===========Trainer-Section================= */
+.trainer-section{
+    margin-top: 10px;
+    background:  #2c2c2c;
+    border-radius: 5px;
+}
+.trainer-section h1 {
+    text-align: center;
+    padding-top :20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color:   #ff4141;;
+}
+.trainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-columns:repeat(auto-fit, minmax(250px,auto)) ;
+    align-items: center;
+
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.trainer_one{
+    border: 2px solid black;
+    border-radius: 8px;
+    transition: all ease .50s;
+  /* justify-content: space-around; */
+    flex-wrap: wrap;
+    padding: 2px 5px;
+    margin-bottom: 5px;
+    margin: 5px;
+}
+.trainer_one:hover{
+    transform: translateY(15px);
+    border: 2px solid #4e5055;
+}
+.trainer_one img{
+    width: 100%;
+    padding: 5px ;
+    border-radius: 7px;
+}
+
+.trainer_one h2 {
+    padding: 10px 15px;
+    color: #fff;
+    text-align: center;
+
+}
+.trainer_one h4 {
+    padding: 10px 15px;
+    
+}
+.trainer_one p{
+    padding: 5px 8px;
+    font-weight: bold;
+}
+.trainer_one p span{
+    color: #fff;
+    font-weight: bold;
+}
+.pro-links{
+    margin-top: 7px;
+    border-radius: 3px;
+    transition: 0.3s;
+    text-align: center;
+   
+
+
+}
+.pro-links i {
+    padding: 8px 10px;
+    border: 1px solid black ;
+    cursor: pointer;
+    transition: 0.3 ease;
+    color: #fff;
+    margin: 4px;
+    border-radius: 50%;
+ 
+   
+}
+.pro-links i:hover {
+    color: #4e5055; 
+    background: #ffffff;
+   
+    border: 1px solid black ;
+
+    cursor: pointer;
+    /* transition: 0.2 ease; */
+    margin: 5px;
+}
+
+
+/* ==========ChatBot */
+
+
+
+/* =======================Workout.html=================== */
+
+
+
+
+.workout-main {
+  height: 100vh;
+  background: url('images/ChatGPT\ Image\ Jul\ 23\,\ 2025\,\ 10_03_10\ AM.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.muscle-btn {
+  background-color:  #ff4141;;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100px;
+}
+
+.muscle-btn:hover {
+  background-color: #e63b3b;
+}
+header .navbar a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+.exercise-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+    margin-top: 60px;
+  
+}
+
+.exercise-card {
+  width: 250px;
+  background-color: #000;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+
+}
+
+
+.exercise-card:hover {
+  transform: translateY(-5px);
+}
+
+.exercise-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.exercise-card h4 {
+  margin: 8px 0;
+  font-size: 25px;
+  color: #fff;
+  
+}
+
+.exercise-card p {
+  margin: 4px 0;
+  font-size: 20px;
+  color: #fff;
+}
+  /* =====================Supplement-section============== */
+  .Supplements-main{
+    padding: 40px 20px;
+   background: 	#2c2c2c;
+  }
+   
+   .Supplements-main h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #ff4141;
+   }
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  
+}
+
+.Supplements-main .product-card {
+    border: 2px solid black;
+    border-radius: 5px;
+     text-align: center;
+      transition: all ease .50s;
+      background-color: 	#2c2c2c;
+}
+.product-card:hover:hover{
+    transform: translateY(15px);
+    border: 2px solid #4e5055;
+}
+
+.Supplements-main .product-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+     border-radius: 8px;
+ margin-top: 5px;
+ 
+}
+
+.product-card .bpd{
+    background: #555;
+}
+
+.product-card .brand{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.product-card .price{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.product-card .dec{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+     margin-bottom: 15px;
+}
+.product-card .cart-btn{
+    background-color:#f0c14b;
+    border: 1px solid #a88734;  
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 600px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+}
+.cart-btn:hover {
+  background-color: #e2b33c;         /* Darker on hover */
+}
+
+/* view detail supplement */
+.view-details,
+.add-to-cart-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 5px;
+  background-color: #ff4141;
+  color: white;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.view-details:hover,
+.add-to-cart-btn:hover {
+  background-color: #e03a3a;
+}
+
+
+/* =====================Diet-Section========== */
+
+.background-image {
+  height: 100vh;
+  background: url('https://t4.ftcdn.net/jpg/08/09/48/25/240_F_809482598_iFY3RUsAXrpaJAuFh2UijLuLhGMQYJDb.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+.getNutrition {
+max-width: 600px;
+  margin: 0 auto;
+  background: 	#0a5e66;
+  border-radius: 12px;
+  padding: 30px;
+  border: 2px solid #2e7d32;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+}
+.getNutrition h2 {
+color: 	#88ccd9;
+}
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  color: #c9185c;
+  border-radius: 8px;
+  border: 3px solid #f0fff0;
+  margin-bottom: 15px;
+  background-color: #f0fff0;
+}
+
+button{
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 10px 16px;
+    color: #111;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+button:hover {
+  background-color: #e63b3b;
+}
+#nutrition-info {
+  font-size: 18px; /* You can change this size as needed */
+  line-height: 1.6;
+  color: #111111;  /* Optional: relevant green tone */
+}
+
+
+
+/* ==================== contact-footer-Section  =============== */
+.footer  {
+     width: 100%;
+  height: 100vh;
+ 
+  background: url('images/ChatGPT\ Image\ Jul\ 24\,\ 2025\,\ 04_32_54\ PM.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  margin-top: 5px;
+  border-radius: 5px;
+  
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #f72585;
+}
+
+.footer-content p {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  max-width: 600px;
+  margin: 0 auto 10px;
+  color:#fff;
+}
+.footer-content h1{
+    font-size: 3rem;
+    color:#c9185c;
+}
+.footer-content h2{
+    margin-left: 100px;
+    color:#ffffff;
+    padding: 10px 20px;
+}
+
+
+
+/* ===========MemberShip-section=================== */
+.memberShip h2{
+  text-align: center;
+  font-size: 30px;
+  
+color:#f72585
+}
+.memberShip p{
+  text-align: center;
+  font-size: 30px;
+  
+color:#c9185c;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============MemberShip_Plan==================== */
+
+
+ .pricing-section {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .pricing-section h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color:#ff4141 ;
+        text-align: center;
+    }
+
+    .pricing-section p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 40px;
+       
+    }
+
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+
+    @media (min-width: 768px) {
+      .pricing-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 30px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: 0.4s ease;
+      animation: float 4s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(201, 24, 92, 0.2);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #e63b3b;
+    }
+
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #ff6f00;
+      color: #fff;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .card .price {
+      font-size: 36px;
+      color: #fff;
+      margin: 20px 0;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features li {
+      margin: 12px 0;
+      color: #ccc;
+    }
+
+    .join-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(45deg, #c9185c, #ff416c);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #c9185c;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .join-btn:hover {
+      background: linear-gradient(45deg, #ff416c, #c9185c);
+      box-shadow: 0 0 25px  #ff4141;;
+      transform: scale(1.05);
+    }
+
+
+    .memberShip_function{
+      margin-top: 40px;
+       padding: 30px 15px;
+    display: flex;
+    flex-wrap: wrap;
+   gap: 30px;
+   background-color: #2c2c2c;
+   justify-content: center;
+    }
+
+    .info{
+      /* border: 2px solid black; */
+      height: 100%;
+      width: 600px;
+    }
+
+
+.info h2 {
+  font-size: 1.5rem;
+  color: #fff; /* or your preferred heading color */
+  margin-bottom: 10px;
+
+}
+
+.heading-line {
+  width: 100%;
+  height: 2px;
+  background-color: #000; /* underline color */
+  border-radius: 1px;
+}
+
+  
+    .info .inputDetail{
+      padding: 10px 20px;
+    }
+     .inputDetail label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 6px;
+    color: #fff; /* Use dark color on light background */
+  }
+   .inputDetail input{
+    border-radius: 5px;
+    background-color: #222;
+    width: 100%;
+    height: 30px;
+    border: 2px solid black;
+   }
+   .inputDetail .go-btn{
+    background-color: #2e7d32;
+justify-content: center;
+margin-top: 10px;
+   }
+.inputDetail .go-btn:hover{
+  background-color: darkgreen;
+}
+  
+ .payment_Method{
+  border: 2px solid black;
+} 
+
+
+
+
+
+/* ===============Contact_form=========== */
+.contactForm {
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+        height: 100vh;
+  background: url('images/testimony112_32_15\ AM\ \(2\).png') no-repeat center center/cover;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+      
+    }
+
+    .contactForm h1 {
+      font-size: 3rem;
+      margin-top: 20px;
+      color: #fff;
+    }
+    .contactForm h1 span{
+      color: #e63b3b;
+    }
+.contactForm .contact_box{
+  display: flex;
+  text-align: center;
+  border: 2px solid  #ff4141;;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+      transition: 0.4s ease;
+      animation: float 4s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(201, 24, 92, 0.2);
+    
+       
+}
+
+    .contact_box:hover {
+      transform: translateY(15px);
+      box-shadow: 0 0 30px #e63b3b;
+    }
+    .contact_box input{
+      font-family: 'Times New Roman', Times, serif;
+        background-color: #f0fff0;
+    }
+  
+.contactForm .contact_box textarea{
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+    background-color: #f0fff0;
+  width: 100%;
+    border: 2px solid  #ff4141;;
+  padding: 7px 15px;
+  border-radius: 5px;
+}
+.submit-btn{
+  background: #ff4141;;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all ease .50s;
+  cursor: pointer;
+}
+.submit-btn:hover{
+  background-color: #e63b3b;
+  color: #fff;
+  transform: translateY(5px);
+}
+
+.contact_Footer{
+  height: 100vh;;
+  background: url(images/megagym-5.jpg)no-repeat center center/cover;
+    display: flex;
+   
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  margin-top: 30px;
+}
+
+ #motivational-text {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px auto;
+  width: 80%;
+  text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+  letter-spacing: 1px;
+  overflow: hidden;
+  position: relative;
+}
+#typed-text{
+  display: inline-block;
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: slideDown 0.5s ease forwards;
+}
+.cursor {
+  display: inline-block;
+  color:  #ff4141;;
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+}
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.contact-info .add-p{
+  color:  #ff4141;;
+  text-shadow: 0 0 8px  #ff4141;;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+.contact-info .add_line{
+  color: #ffffff;
+  text-shadow: 0 0 8px #c9185c;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* ==================lOGIN-Form box==================== */
+.container {
+
+   max-width: 600px;
+      margin: 20px  auto;
+      text-align: center;
+      border: 5px solid  #ff4141;;
+      background-color: #2c2c2c;
+      padding: 10px 20px;
+ border-radius: 5px;
+ border: 3px solid rgba(255, 255, 255, 0.1);
+      transition: 0.4s ease;
+      animation: float 4s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(201, 24, 92, 0.2);
+    
+        height: 100vh;
+  background: url('images/ChatGPT\ Image\ Jul\ 23\,\ 2025\,\ 09_56_38\ AM.png') no-repeat center center/cover;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+       
+}
+
+    .container:hover {
+      transform: translateY(15px);
+      box-shadow: 0 0 30px #e63b3b;
+    }
+
+/* Headline */
+h1 {
+    font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+/* Input fields */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 13px;
+
+}
+
+
+/* All buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  background-color: #ff4141;;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color:#c9185c;
+}
+
+/* Special buttons */
+.google-btn { background-color: #db4437; }
+.google-btn:hover { background-color: #c1351d; }
+
+.facebook-btn { background-color: #3b5998; }
+.facebook-btn:hover { background-color: #2d4373; }
+
+.logout-btn { background-color: #333; }
+.logout-btn:hover { background-color: #333; }
+
+.success {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* User Info */
+.user-info {
+  margin-top: 20px;
+}
+
+.user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+
+/* Media Query for Mobile */
+@media (max-width: 992px) {
+     .menu-btn {
+        display: block;
+        left: 0;
+      }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+       
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+  
+       .nav-links.show {
+        display: flex;
+      }
+
+
+} 
+
+@media (max-width: 768px) {
+     .menu-btn {
+        display: block;
+        left: 0;
+      }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+       
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+  
+       .nav-links.show {
+        display: flex;
+      }
+
+
+
+
+      .contact_Footer{
+        flex-wrap: wrap;
+        
+        justify-content: center;
+      }
+ /* ==========exercise============== */
+.workout-main {
+flex-wrap: wrap;
+justify-content: center;
+}
+
+}
+
+
+     
+
+
+@media(max-width:480px){
+  .auth-buttons a {
+    padding: 5px 8px;
+    font-size: 10px;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media(max-width:400px){
+  .auth-buttons a {
+    padding: 5px 6px;
+    font-size: 8px;
+   display: flex;
+   flex-direction: row;
+   margin: 5px;
+  }
+
+}

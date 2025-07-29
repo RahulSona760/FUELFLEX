@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Application</title>
+    <link rel="stylesheet" href="chat.css">
+    
+</head>
+<body>
+   
+<nav class="navbar">
+  <div class="logo">FlexFuel</div>
+    <div class="menu-btn" id="menuBtn">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="btn">Home</a></li>
+    <li><a href="workout.html ">Workouts</a></li>
+    <li><a href="#about-trainer"> Our Trainer</a></li>
+    <li><a href="memeber_Ship.html">Membership</a></li6>
+    <li><a href="store.html">Supplements</a></li>
+    <li><a href="Diet.html">Diet-Plans</a></li>
+    <li><a href="contact.html">Contact</a></li>
+     <li><a href="chat.html">Chatbot</a></li>
+  </ul>
+  
+ 
+  <div class="auth-buttons">
+    <a href="loginForm.html" class="login-btn">Login</a>
+    <a href="loginForm.html" class="signup-btn">Sign Up</a>
+  </div>
+  
+</nav>
+    <div id="chatbot-button">
+        <div id="chatbot-button-icon">💬</div>
+    </div>
+    
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <div id="chatbot-title">Chatbot Assistant</div>
+            <button id="chatbot-minimize">−</button>
+        </div>
+        <div id="chatbot-messages">
+            <div class="message bot-message">Hello! How can I help you today?</div>
+        </div>
+        <div id="chatbot-input-container">
+            <input type="text" id="chatbot-input" placeholder="Type your message...">
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotButton = document.getElementById('chatbot-button');
+            const chatbotContainer = document.getElementById('chatbot-container');
+            const minimizeButton = document.getElementById('chatbot-minimize');
+            const sendButton = document.getElementById('chatbot-send');
+            const chatInput = document.getElementById('chatbot-input');
+            const messagesContainer = document.getElementById('chatbot-messages');
+            
+            let isMaximized = false;
+            
+            // Toggle chatbot visibility
+            chatbotButton.addEventListener('click', toggleChatbot);
+            minimizeButton.addEventListener('click', toggleChatbot);
+            
+            // Send message when clicking send button or pressing Enter
+            sendButton.addEventListener('click', sendMessage);
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            function toggleChatbot() {
+                isMaximized = !isMaximized;
+                if (isMaximized) {
+                    chatbotContainer.classList.add('maximized');
+                } else {
+                    chatbotContainer.classList.remove('maximized');
+                }
+            }
+            
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (message === '') return;
+                
+                // Add user message to chat
+                addMessage(message, 'user');
+                chatInput.value = '';
+                
+                // Simulate bot thinking
+                setTimeout(() => {
+                    const response = generateResponse(message);
+                    addMessage(response, 'bot');
+                }, 500);
+            }
+            
+            function addMessage(text, sender) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message');
+                messageElement.classList.add(sender + '-message');
+                messageElement.textContent = text;
+                messagesContainer.appendChild(messageElement);
+                
+                // Scroll to bottom
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+            function generateResponse(userMessage) {
+    const message = userMessage.toLowerCase();
+
+    // Common greetings
+    if (/hello|hi|hey|hii/.test(message)) {
+        return "Hello there! How can I assist you today?";
+    } else if (/how are you|how's it going|what’s up|how’ve you been|how are things|you good|how's life/.test(message)) {
+        return "I'm just a chatbot, but I'm functioning well! How about you?";
+    
+    // General support
+    } else if (/help|support/.test(message)) {
+        return "I can help with workouts, nutrition, supplements, and general queries. Ask me anything!";
+    
+    // Gratitude
+    } else if (/thank|thanks/.test(message)) {
+        return "You're welcome! Let me know if you need anything else.";
+    
+    // Exit
+    } else if (/bye|goodbye|see you/.test(message)) {
+        return "Goodbye! Keep training hard and come back if you need help!";
+    
+    // Gym-specific questions
+    } else if (/best exercises for chest|chest workout/.test(message)) {
+        return "Some great chest exercises include bench press, incline dumbbell press, push-ups, and cable flys.";
+    } else if (/lose belly fat|burn fat|fat loss/.test(message)) {
+        return "To lose fat: stay in a calorie deficit, do regular cardio, and strength train 3-4x a week.";
+    } else if (/gain muscle|muscle building/.test(message)) {
+        return "Focus on progressive overload with compound lifts, eat a calorie surplus, and sleep well.";
+    } else if (/diet|nutrition/.test(message)) {
+        return "Eat balanced meals with protein, carbs, and healthy fats. Want a sample diet?";
+    } else if (/supplement|protein|whey/.test(message)) {
+        return "Whey protein helps you meet your protein goal. Creatine is good for strength. Always consult a trainer.";
+    } else if (/how many sets|reps/.test(message)) {
+        return "3 to 4 sets of 8–12 reps is a good starting point for muscle growth.";
+    } else if (/abs|six pack/.test(message)) {
+        return "Train your core 3x a week and follow a clean diet. Abs are made in the kitchen!";
+    } else if (/motivation|lazy/.test(message)) {
+        return "Discipline beats motivation. Start small, stay consistent, and track your progress!";
+    } else if (/rest day|recovery/.test(message)) {
+        return "Rest days are essential for muscle growth and injury prevention. Aim for 1–2 rest days a week.";
+    
+    // Business info
+    } else if (/hours|open|close|gym time|gym hours|gym timing/.test(message)) {
+        return "Our gym is open Monday to Saturday, 6 AM to 10 PM.";
+    } else if (/contact|phone|email/.test(message)) {
+        return "Contact us at fitgym@example.com or call us at +91 9876543210.";
+    } else if (/services|offer/.test(message)) {
+        return "We offer personal training, group classes, nutrition counseling, and supplement guidance.";
+    } else if (/name/.test(message)) {
+        return "I'm your Gym Assistant Bot, here to support your fitness journey!";
+    } else if (/joke|funny/.test(message)) {
+        return "Why did the gym close down? It just didn't work out!";
+    
+    // Default fallback
+    } else {
+        return "I'm not sure I understand. Could you rephrase that or ask something else about fitness or our services?";
+    }
+}
+
+            
+          
+            toggleChatbot();
+        });
+    </script>
+</body>
+</html>

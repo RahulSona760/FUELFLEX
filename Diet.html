@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrition Info</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+    <!--================Nav-bar===================  -->
+
+<nav class="navbar">
+  <div class="logo">FlexFuel</div>
+  <div class="menu-btn" id="menuBtn">&#9776;</div>
+  
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="workout.html ">Workouts</a></li>
+    <li><a href="memeber_Ship.html">Membership</a></li>
+    <li><a href="store.html">Supplements</a></li>
+    <li><a href="Diet.html" class="btn">Diet-Plans</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="auth-buttons">
+    <a href="loginForm.html" class="login-btn">Login</a>
+    <a href="loginForm.html" class="signup-btn">Sign Up</a>
+  </div>
+</nav>
+   
+
+<div class="background-image">
+<!-- =================Nurition-Section================ -->
+    <section class="getNutrition" id="nutrition-info">
+        <h2>Check Nutrition</h2>
+  <input type="text" id="foodInput" placeholder="Enter a food (e.g. 1 apple)">
+  <button onclick="getNutrition()">Get Nutrition</button>
+
+  <pre id="result"></pre>
+    </section>
+  </div>
+
+  <script>
+    async function getNutrition() {
+      const query = document.getElementById('foodInput').value;
+      const resultDiv = document.getElementById('result');
+
+      const response = await fetch(`https://api.calorieninjas.com/v1/nutrition?query=${query}`, {
+        headers: {
+          'X-Api-Key': '1jNFRf6e/cwpfvlHAdmiQw==YGDhf6pXugkWngcB' // replace with your real API key
+        }
+      });
+
+      const data = await response.json();
+      console.log(data); // show in console
+      resultDiv.textContent = JSON.stringify(data.items[0], null, 2); // show in page
+    }
+    document.getElementById('nutrition-info').innerHTML = `
+  <h3>Calories: ${data.calories}</h3>
+  <p>Protein: ${data.protein_g}g</p>
+  <p>Carbs: ${data.carbohydrates_total_g}g</p>
+`;
+
+  </script>
+ 
+
+  <script>
+        const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+console.log("menuBtn:", menuBtn);
+    console.log("navLinks:", navLinks);
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    </script>
+</body>
+</html>

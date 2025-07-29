@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!--================Nav-bar===================  -->
+
+<nav class="navbar">
+  <div class="logo">FlexFuel</div>
+    <div class="menu-btn" id="menuBtn">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="workout.html ">Workouts</a></li>
+    <!-- <li><a href="#about-trainer"> Our Trainer</a></li> -->
+<li><a href="memeber_Ship.html" >MemberShip</a></li>
+    <li><a href="store.html" >Supplements</a></li>
+    <li><a href="Diet.html">Diet-Plans</a></li>
+    <li><a href="contact.html" class="btn">Contact</a></li>
+  
+  </ul>
+  
+ 
+  <div class="auth-buttons">
+    <a href="loginForm.html" class="login-btn">Login</a>
+    <a href="loginForm.html" class="signup-btn">Sign Up</a>
+  </div>
+  </nav>
+
+    
+    
+  <!-- ==================Contact_Form============ -->
+   <section class="contactForm">
+  <h1>CONTACT <span>US</span></h1>
+<div class="contact_box">
+     
+    <form action=""  id="messageForm">
+        <input type="text" id="name" name="user_name" placeholder="Enter Your Name">
+        <input type="text" id="email" name="user_email" placeholder="Enter Your Email">
+        <input type="text" id="subject" name="user_subject" placeholder="Subject">
+        <textarea name="user_message" id="message" rows="5"  placeholder="Enter your Message"></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+          <p id="successMessage" style="display: none; background-color: aliceblue; color: #333; font-weight: bold;">
+      ✅ Your request has been sent!
+    </p>
+
+
+    </form>
+</div>
+   </section>
+
+   <!-- Contact-Footer=================== -->
+   <section  class="contact_Footer">
+
+<h2 id="motivational-text">
+  <span id="typed-text"></span><span id="cursor">|</span></h2>
+
+
+  <div class="contact-info">
+     <p class="add-p">We'd love to hear from you! Reach out for membership, support, or just a quick chat.</p>
+    <p class="add_line"><i class="fas fa-map-marker-alt"></i> 123 Fitness Avenue, Muscle City, India</p>
+    <p class="add_line"><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+    <p class="add_line"><i class="fas fa-envelope"></i> info@gymmax.com</p>
+    <p class="add_line"><i class="fas fa-clock"></i> Mon - Sat: 6am – 10pm</p>
+  </div>
+   </section>
+<!--==================== EmailJS ==================== -->
+<script>
+  
+  function showNotification(message, type) {
+    const successMessage = document.getElementById('successMessage');
+    successMessage.innerHTML = message;
+
+successMessage.classList.remove('success', 'error');
+  successMessage.classList.add(type === 'success' ? 'success' : 'error');
+
+    successMessage.style.display = 'block';
+  }
+ // Initialize form handling for EmailJS
+  function initializeFormHandling() {
+    const contactForm = document.getElementById('messageForm'); // Your form ID
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const submitBtn = this.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+
+        // Show loading state
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        // Initialize EmailJS
+        if (window.emailjs) {
+          emailjs.init('8i5nX8joNDsRveiI1'); // Your Public Key
+
+          emailjs.sendForm('service_lwtwlzr', 'template_5mivlyc', this) // ✅ Service ID, Template ID
+            .then(() => {
+              showNotification(
+                `Hi <b>${this.elements['user_name'].value}</b>,<br><br>
+                ✅ Thank you for reaching out!<br><br>
+                We’ve received your message:<br>
+                <blockquote>"${this.elements['message'].value}"</blockquote><br>
+                We'll get back to you within 24 hours.<br><br>
+                Regards,<br>
+                Rahul<br>
+                <hr>
+                <small>This is an automated confirmation. Please don’t reply directly.</small>`,
+                'success'
+              );
+              this.reset();
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            }, (error) => {
+              console.error(error);
+              showNotification('❌ Sorry, there was an error sending your message. Please try again later.', 'error');
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            });
+
+        } else {
+          showNotification('❌ Email service not loaded. Please check your connection or try again later.', 'error');
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  }
+
+  // Initialize when DOM is ready
+  document.addEventListener('DOMContentLoaded', initializeFormHandling);
+</script>
+<!-- EmailJS Library -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+
+<!--  ===================animation Effect======================-->
+
+   <script>
+    const text = "Don't wish for it — work for it. Your transformation starts here.";
+const textElement = document.getElementById("typed-text");
+let i = 0;
+
+function typeEffect() {
+  if (i === 0) {
+    textElement.innerHTML = ""; // clear before starting
+    textElement.style.animation = "none"; // reset animation
+    void textElement.offsetWidth; // trigger reflow
+    textElement.style.animation = "slideDown 0.5s ease forwards";
+  }
+
+  if (i < text.length) {
+    textElement.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 50);
+  } else {
+    setTimeout(() => {
+      i = 0;
+      typeEffect();
+    }, 1000);
+  }
+}
+
+window.onload = typeEffect;
+
+   </script>
+
+
+<!-- =============Menu_Btn================= -->
+   <script>
+        const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+console.log("menuBtn:", menuBtn);
+    console.log("navLinks:", navLinks);
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    </script>
+
+ <script src="index.js"></script>
+</body>
+</html>

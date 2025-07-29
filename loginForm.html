@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ✅ Firebase SDK for BROWSER, not modules -->
+<!-- Firebase SDK v8 -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<!--  =================== Firebase Config================== -->
+
+    
+<!-- Firebase v8 SDK (No type="module") -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+
+<script>
+  // ✅ Your Firebase config (keep this)
+  const firebaseConfig = {
+    apiKey: "AIzaSyCcg0j8QJRS5ohi7igy7czn7iviJal0cAw",
+    authDomain: "flexfuel-ed3cc.firebaseapp.com",
+    projectId: "flexfuel-ed3cc",
+    storageBucket: "flexfuel-ed3cc.firebasestorage.app",
+    messagingSenderId: "200957962138",
+    appId: "1:200957962138:web:78a1d042a19db9dd91fc23",
+    measurementId: "G-DD8DMZR0HY"
+  };
+
+  // ✅ Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+</head>
+
+
+<body>
+    
+<!--================Nav-bar===================  -->
+
+<nav class="navbar">
+  <div class="logo">FlexFuel</div>
+    <div class="menu-btn" id="menuBtn">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="btn">Home</a></li>
+    <li><a href="workout.html ">Workouts</a></li>
+    <li><a href="#about-trainer"> Our Trainer</a></li>
+    <li><a href="memeber_Ship.html">Membership</a></li6>
+    <li><a href="store.html">Supplements</a></li>
+    <li><a href="Diet.html">Diet-Plans</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  
+ 
+  <div class="auth-buttons">
+    <a href="" class="login-btn">Login</a>
+    <a href="#" class="signup-btn">Sign Up</a>
+  </div>
+  
+</nav>
+     <!--=============== Email/Password Login================ -->
+<div class="container">
+    <h1>LOGIN TO CONTINUE</h1>
+
+    <div class="form-container">
+    <input type="email" id="email" placeholder="Email" />
+    <br>
+    <input type="password" id="password" placeholder="Password" />
+
+    <button onclick="signUp()">Sign Up</button>
+
+    <button onclick="login()">Login</button>
+        <p id="errorMsg" style="color: red; display: none;"></p>
+    <p id="successMsg" style="color: green; display: none; font-size: 26px;">✅ Signup successful!</p>
+
+    <p class="divider">OR</p>
+
+    <!-- Google / Facebook -->
+    <button class="google-btn" onclick="signInWithGoogle()">Login with Google</button>
+    <button class="facebook-btn" onclick="signInWithFacebook()">Login with Facebook</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+    <!-- User Info -->
+    <div class="user-info" id="user-info" style="display: none;">
+      <!-- <img id="user-pic" src="" alt="User Picture" /> -->
+      <p id="user-name"></p>
+      <p id="user-email"></p>
+    </div>
+    </div>
+  </div>
+
+ <!-- ========================JS Logic  FireBase====================-->
+    <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const auth = firebase.auth();
+
+      // 🔐 Auth Functions
+      function showUser(user) {
+        document.getElementById("user-info").style.display = "block";
+        //document.getElementById("user-pic").src = user.photoURL || "";
+        document.getElementById("user-name").innerText = "Hello, " + (user.displayName || "User");
+        document.getElementById("user-email").innerText = user.email;
+      }
+
+
+
+      window.signUp = function () {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        auth.createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+           const successMsg = document.getElementById("successMsg");
+    successMsg.innerText = "✅ Signup successful!";
+    successMsg.style.display = "block";
+            showUser(userCredential.user);
+                setTimeout(() => {
+      successMsg.style.display = "none";
+    }, 4000);
+          })
+          .catch((error) => alert(error.message));
+      };
+
+      window.login = function () {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        auth.signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            alert("Login successful!");
+            showUser(userCredential.user);
+          })
+          .catch((error) => alert(error.message));
+      };
+
+      window.signInWithGoogle = function () {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        auth.signInWithPopup(provider)
+          .then((result) => {
+            alert("Google login successful!");
+            showUser(result.user);
+          })
+          .catch((error) => alert(error.message));
+      };
+
+      window.signInWithFacebook = function () {
+        const provider = new firebase.auth.FacebookAuthProvider();
+        auth.signInWithPopup(provider)
+          .then((result) => {
+            alert("Facebook login successful!");
+            showUser(result.user);
+          })
+          .catch((error) => alert(error.message));
+      };
+
+      window.logout = function () {
+        auth.signOut().then(() => {
+          document.getElementById("user-info").style.display = "none";
+          alert("Logged out!");
+        });
+      };
+
+      // 👀 Redirect to dashboard if already logged in
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          showUser(user);
+          // window.location.href = "dashboard.html";
+        }
+      });
+
+      // 📬 Contact form logic
+      const form = document.getElementById("messageForm");
+      const successMsg = document.getElementById("successMsg");
+
+      if (form && successMsg) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          successMsg.style.display = "block";
+          form.reset();
+          setTimeout(() => {
+            successMsg.style.display = "none";
+          }, 4000);
+        });
+      }
+    });
+  </script>
+
+ <script>
+        const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+console.log("menuBtn:", menuBtn);
+    console.log("navLinks:", navLinks);
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    </script>
+
+</body>
+</html>

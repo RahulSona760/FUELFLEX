@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <!-- nav_bar===================== -->
+<!--================Nav-bar===================  -->
+
+<nav class="navbar">
+  <div class="logo">FlexFuel</div>
+    <div class="menu-btn" id="menuBtn">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="btn">Home</a></li>
+    <li><a href="workout.html ">Workouts</a></li>
+    <li><a href="#about-trainer"> Our Trainer</a></li>
+    <li><a href="memeber_Ship.html">Membership</a></li6>
+    <li><a href="store.html">Supplements</a></li>
+    <li><a href="Diet.html">Diet-Plans</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    
+  </ul>
+  
+ 
+  <div class="auth-buttons">
+    <a href="loginForm.html" class="login-btn">Login</a>
+    <a href="loginForm.html" class="signup-btn">Sign Up</a>
+  </div>
+  
+</nav>
+
+  <!-- Product Header -->
+  <section class="product-header">
+    <img src="images/whey.jpg" alt="Whey Protein" class="product-img"/>
+    <h1>Optimum Nutrition – Gold Standard 100% Whey Protein</h1>
+    <p>Top-selling protein with isolate, concentrate & hydrolyzed blend. Great for lean muscle and recovery.</p>
+  </section>
+
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-link active" onclick="openTab('overview')">Overview</button>
+    <button class="tab-link" onclick="openTab('nutrition')">Nutrition</button>
+    <button class="tab-link" onclick="openTab('comparison')">Comparison</button>
+    <button class="tab-link" onclick="openTab('tips')">Buying Tips</button>
+  </div>
+
+
+ <!-- Tab Contents -->
+  <div id="overview" class="tab-content active">
+    <h2>Overview</h2>
+    <p>ON Gold Standard Whey is a blend of isolate, concentrate, and hydrolyzed peptides designed for fast digestion and muscle repair. It is one of the most trusted supplements among athletes and fitness enthusiasts worldwide.</p>
+  </div>
+
+  <div id="nutrition" class="tab-content">
+    <h2>Nutrition</h2>
+    <ul>
+      <li>~24g protein per scoop (30-33g)</li>
+      <li>5–6g BCAAs</li>
+      <li>~4g glutamine</li>
+      <li>Calories: ~120–130</li>
+      <li>Includes digestive enzyme Aminogen</li>
+    </ul>
+  </div>
+
+ <div id="comparison" class="tab-content">
+    <h2>Product Comparison</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Optimum Nutrition</th>
+          <th>NOW Foods</th>
+        </tr>
+      </thead>
+      <tbody>
+  <tr>
+          <td>Protein per serving</td>
+          <td>~24 g</td>
+          <td>24–26 g</td>
+        </tr>
+        <tr>
+          <td>Formulation</td>
+          <td>Isolate + Concentrate + Hydrolyzed</td>
+          <td>WPC/WPI blend or pure WPI</td>
+        </tr>
+        <tr>
+          <td>Sweeteners</td>
+          <td>Sucralose, Acesulfame K</td>
+          <td>Stevia, Xylitol (no artificial)</td>
+        </tr>
+        <tr>
+ <td>Calories</td>
+          <td>120–130 kcal</td>
+          <td>120–160 kcal</td>
+        </tr>
+        <tr>
+          <td>Certifications</td>
+          <td>Informed‑Choice, Gluten-Free</td>
+          <td>Halal, Kosher, Non-GMO</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="tips" class="tab-content">
+    <h2>Buying Tips</h2>
+    <ul>
+      <li>Buy from official stores or certified online sellers.</li>
+      <li>Verify the scratch code for authenticity (ON products).</li>
+      <li>Choose isolate versions if you're lactose intolerant.</li>
+      <li>Follow the recommended serving and stay hydrated.</li>
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======================Menu_btn=============== -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+console.log("menuBtn:", menuBtn);
+    console.log("navLinks:", navLinks);
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    </script>
+
+    <script src="jsscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+       <!-- googlefont-link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+      <!-- linking swiper-link -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    
+    
+
+
+  
+</head>
+<body>
+<!-- nav_bar===================== -->
+<!--================Nav-bar===================  -->
+
+<nav class="navbar">
+  <div class="logo">FlexFuel</div>
+    <div class="menu-btn" id="menuBtn">&#9776;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="btn">Home</a></li>
+    <li><a href="workout.html ">Workouts</a></li>
+    <li><a href="#about-trainer"> Our Trainer</a></li>
+    <li><a href="memeber_Ship.html">Membership</a></li6>
+    <li><a href="store.html">Supplements</a></li>
+    <li><a href="Diet.html">Diet-Plans</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    
+  </ul>
+  
+ 
+  <div class="auth-buttons">
+    <a href="loginForm.html" class="login-btn">Login</a>
+    <a href="loginForm.html" class="signup-btn">Sign Up</a>
+  </div>
+  
+</nav>
+
+
+<!-- Hero-section================= -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Fuel Your Fitness Journey</h1>
+    <p>Train smart. Eat right. Transform your body with FlexFuel.</p>
+    <div class="hero-buttons">
+      <a href="Workout.html" class="btn">Explore Workouts</a>
+      <a href="store.html" class="btn secondary">Shop Supplements</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+   <div id="chatbot-button">
+        <div id="chatbot-button-icon">💬</div>
+    </div>
+    
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <div id="chatbot-title">Chatbot Assistant</div>
+            <button id="chatbot-minimize">−</button>
+        </div>
+        <div id="chatbot-messages">
+            <div class="message bot-message">Hello! How can I help you today?</div>
+        </div>
+        <div id="chatbot-input-container">
+            <input type="text" id="chatbot-input" placeholder="Type your message...">
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+<!-- ================trainer-Sction================ -->
+ <section  class="trainer-section" id="about-trainer">
+  <h1>MEET OUR EXPERT TRAINERS</h1>
+
+
+  <!-- 1 -->
+  <div class="trainer"> 
+<div class="trainer_one">
+  <img src="images/john-fornander-TAZoUmDqzXk-unsplash (2).jpg"alt="">
+  <h2>Emilly Smith</h2>
+  <p><span>3 Years of Experience</span> </p>
+  
+  <p>Certified Strength & Conditioning Coach .</p>
+ <p>Contact or Book Session Button</p>
+ <h4>Animated counters like "50+ Clients Trained"</h4>
+     <div class="pro-links">
+                <i class="fa-brands fa-instagram" id="insta"></i>
+                <i class="fa-brands fa-facebook" id="fb"></i>
+                <i class="fa fa-phone" aria-hidden="true"></i>91+982828882
+
+
+            </div>
+</div>
+
+
+
+
+
+
+<!-- 2 -->
+<div class="trainer_one">
+  <img src="images/mediamodifier-gU2MOI0ZsiI-unsplash (1).jpg"alt="">
+  <h2>John doe </h2>
+    <p><span>1  Years of Experience</span></p>
+  <p>Certifications (e.g., ACE, ISSA, CSCS)</p>
+  <p>Functional Training Expert & Nutrition Advisor</p>
+ <p>Contact or Book Session Button</p>
+ <h4>Animated counters like "50+ Clients Trained"</h4>
+   <div class="pro-links">
+                <i class="fa-brands fa-instagram" id="insta"></i>
+                <i class="fa-brands fa-facebook" id="fb"></i>
+               <i class="fa fa-phone" aria-hidden="true"></i>91+982828882
+
+
+            </div>
+</div>
+<!-- 3 -->
+<div class="trainer_one">
+  <img src="images/megagym-6.jpg"alt="">
+  <h2>Albert Fernandez</h2>
+  <p><span>2 Years of Experience</span></p>
+
+ <p>Cardio & HIIT Specialist with a focus on endurance, fat-loss, and sustainable results for all fitness levels.</p>
+ <p>Contact or Book Session Button</p>
+ <h4>Animated counters like "50+ Clients Trained"</h4>
+   <div class="pro-links">
+                <i class="fa-brands fa-instagram" id="insta"></i>
+                <i class="fa-brands fa-facebook" id="fb"></i>
+                <i class="fa fa-phone" aria-hidden="true"></i>91+982828882
+
+            </div>
+</div>
+  </div>
+ </section>
+
+
+<!-- Testmoial-secrion================== -->
+
+          <!--===================== testimonial-section================ -->
+   <section class="testimonials-section" id="testimonial">
+    <h2 class="section-title">TESTIMONIAL</h2>
+      <div class="section-contenter swiper">
+        <div class="slider-wrapper">
+          <ul class="testimonial-list swiper-wrapper">
+
+            <li class="testimonial swiper-slide">
+            <img src="images/testimony112_32_15 AM (1).png" alt="" class="user-image">
+              <h3 class="name">Sarah joe</h3>
+                            <i class="feedback">"Joining this gym was the best decision I’ve made for my health. The trainers are incredibly supportive and knowledgeable, and the atmosphere keeps me motivated every day. I’ve seen major improvements in my strength and confidence since I started. Highly recommend it to anyone serious about getting fit!".</i>
+                            </li>
+
+            <li class="testimonial swiper-slide">
+            <img src="images/test2.png" alt="" class="user-image">
+                                <h3 class="name">Daniel</h3>
+                                <i class="feedback"> "I never imagined lifting weights would become a passion. Thanks to the expert coaching here, I’ve gained strength, confidence, and discipline. The environment pushes you to be your best every day."</i>
+                            </li>
+
+            <li class="testimonial swiper-slide">
+            <img src="images/test3.png" alt="" class="user-image">
+                                <h3 class="name">John Doe</h3>
+                                <i class="feedback">"I joined to lose weight, but I gained a whole new lifestyle. The workouts, the nutrition advice, and the constant motivation helped me shed 12 kg in just 4 months. I feel stronger—mentally and physically."</i>
+                            </li>
+
+            <li class="testimonial swiper-slide">
+            <img src="images/TEST4.png" alt="" class="user-image">
+                                <h3 class="name">Luke Morries</h3>
+                                <i class="feedback">"As a total beginner, I was nervous. But the trainers were super patient and guided me step by step. Now I train 5 days a week and love seeing the results in the mirror and the weights I lift!"</i>
+                            </li>
+
+              </ul>
+
+        <div class=" swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+          </div>
+                </div>
+</section>
+
+  <!-- ===================Footer-Setion=============== -->
+
+ <section class="footer">
+<div class="footer-content">
+  <p>GET OUT OF YOUR</p>
+    <h1>COMFORT ZONE</h1>
+    <!-- <p>Train smart. Eat right. Transform your body with FlexFuel.</p> -->
+    <!-- <div class="hero-buttons">
+      <a href="Workout.html" class="btn">Explore Workouts</a>
+      <a href="store.html" class="btn secondary">Shop Supplements</a>
+      h1
+
+    </div> -->
+    <h2>"Pain is temporary, pride is forever."</h2>
+    <h2>"Push yourself because no one else is going to do it for you."</h2>
+  </div>
+ </section>
+
+
+ <!--============== Footer_section================= -->
+ <footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>FlexFuel Gym</h2>
+      <p>Fuel your body, fuel your life.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <p>Email: support@flexfuel.com</p>
+      <p>Phone: +91 9541032039</p>
+      <p>Address: Your Gym Address, City, India</p>
+    </div>
+  </div>
+  <p class="copyright">© 2025 FlexFuel. All rights reserved.</p>
+</footer>
+
+                 <!-- linking swiper-link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <!-- ======================Menu_btn=============== -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+console.log("menuBtn:", menuBtn);
+    console.log("navLinks:", navLinks);
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+    </script>
+
+
+<!-- ========Chat_Bot===================== -->
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotButton = document.getElementById('chatbot-button');
+            const chatbotContainer = document.getElementById('chatbot-container');
+            const minimizeButton = document.getElementById('chatbot-minimize');
+            const sendButton = document.getElementById('chatbot-send');
+            const chatInput = document.getElementById('chatbot-input');
+            const messagesContainer = document.getElementById('chatbot-messages');
+            
+            let isMaximized = false;
+            
+            // Toggle chatbot visibility
+            chatbotButton.addEventListener('click', toggleChatbot);
+            minimizeButton.addEventListener('click', toggleChatbot);
+            
+            // Send message when clicking send button or pressing Enter
+            sendButton.addEventListener('click', sendMessage);
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            function toggleChatbot() {
+                isMaximized = !isMaximized;
+                if (isMaximized) {
+                    chatbotContainer.classList.add('maximized');
+                } else {
+                    chatbotContainer.classList.remove('maximized');
+                }
+            }
+            
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (message === '') return;
+                
+                // Add user message to chat
+                addMessage(message, 'user');
+                chatInput.value = '';
+                
+                // Simulate bot thinking
+                setTimeout(() => {
+                    const response = generateResponse(message);
+                    addMessage(response, 'bot');
+                }, 500);
+            }
+            
+            function addMessage(text, sender) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message');
+                messageElement.classList.add(sender + '-message');
+                messageElement.textContent = text;
+                messagesContainer.appendChild(messageElement);
+                
+                // Scroll to bottom
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+            function generateResponse(userMessage) {
+    const message = userMessage.toLowerCase();
+
+    // Common greetings
+    if (/hello|hi|hey|hii/.test(message)) {
+        return "Hello there! How can I assist you today?";
+    } else if (/how are you|how's it going|what’s up|how’ve you been|how are things|you good|how's life/.test(message)) {
+        return "I'm just a chatbot, but I'm functioning well! How about you?";
+    
+    // General support
+    } else if (/help|support/.test(message)) {
+        return "I can help with workouts, nutrition, supplements, and general queries. Ask me anything!";
+    
+    // Gratitude
+    } else if (/thank|thanks/.test(message)) {
+        return "You're welcome! Let me know if you need anything else.";
+    
+    // Exit
+    } else if (/bye|goodbye|see you/.test(message)) {
+        return "Goodbye! Keep training hard and come back if you need help!";
+    
+    // Gym-specific questions
+    } else if (/best exercises for chest|chest workout/.test(message)) {
+        return "Some great chest exercises include bench press, incline dumbbell press, push-ups, and cable flys.";
+    } else if (/lose belly fat|burn fat|fat loss/.test(message)) {
+        return "To lose fat: stay in a calorie deficit, do regular cardio, and strength train 3-4x a week.";
+    } else if (/gain muscle|muscle building/.test(message)) {
+        return "Focus on progressive overload with compound lifts, eat a calorie surplus, and sleep well.";
+    } else if (/diet|nutrition/.test(message)) {
+        return "Eat balanced meals with protein, carbs, and healthy fats. Want a sample diet?";
+    } else if (/supplement|protein|whey/.test(message)) {
+        return "Whey protein helps you meet your protein goal. Creatine is good for strength. Always consult a trainer.";
+    } else if (/how many sets|reps/.test(message)) {
+        return "3 to 4 sets of 8–12 reps is a good starting point for muscle growth.";
+    } else if (/abs|six pack/.test(message)) {
+        return "Train your core 3x a week and follow a clean diet. Abs are made in the kitchen!";
+    } else if (/motivation|lazy/.test(message)) {
+        return "Discipline beats motivation. Start small, stay consistent, and track your progress!";
+    } else if (/rest day|recovery/.test(message)) {
+        return "Rest days are essential for muscle growth and injury prevention. Aim for 1–2 rest days a week.";
+    
+    // Business info
+    } else if (/hours|open|close|gym time|gym hours|gym timing/.test(message)) {
+        return "Our gym is open Monday to Saturday, 6 AM to 10 PM.";
+    } else if (/contact|phone|email/.test(message)) {
+        return "Contact us at fitgym@example.com or call us at +91 9876543210.";
+    } else if (/services|offer/.test(message)) {
+        return "We offer personal training, group classes, nutrition counseling, and supplement guidance.";
+    } else if (/name/.test(message)) {
+        return "I'm your Gym Assistant Bot, here to support your fitness journey!";
+    } else if (/joke|funny/.test(message)) {
+        return "Why did the gym close down? It just didn't work out!";
+    
+    // Default fallback
+    } else {
+        return "I'm not sure I understand. Could you rephrase that or ask something else about fitness or our services?";
+    }
+}
+
+            
+            // function addMessage(text, sender) {
+            //     const messageElement = document.createElement('div');
+            //     messageElement.classList.add('message');
+            //     messageElement.classList.add(sender + '-message');
+            //     messageElement.textContent = text;
+            //     messagesContainer.appendChild(messageElement);
+                
+            //     // Scroll to bottom
+            //     messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            // }
+            
+            // function generateResponse(userMessage) {
+            //     // Convert to lowercase for case-insensitive matching
+            //     const message = userMessage.toLowerCase();
+                
+            //     // Keyword-based responses using regular expressions
+            //     if (/hello|hi|hey|hii/.test(message)) {
+            //         return "Hello there! How can I assist you today?";
+            //     } else if (/how are you|how's it going|What’s up?|How’ve you been?|How are things|You good|How's life/.test(message)) {
+            //         return "I'm just a chatbot, but I'm functioning well! How about you?";
+            //     } else if (/help|support/.test(message)) {
+            //         return "I can help with general questions. Try asking about our services, hours, or contact information.";
+            //     } else if (/thank|thanks/.test(message)) {
+            //         return "You're welcome! Is there anything else I can help with?";
+            //     } else if (/bye|goodbye|see you/.test(message)) {
+            //         return "Goodbye! Feel free to come back if you have more questions.";
+            //     } else if (/hours|open|close/.test(message)) {
+            //         return "Our business hours are Monday to Friday, 9 AM to 5 PM.";
+            //     } else if (/contact|phone|email/.test(message)) {
+            //         return "You can reach us at support@example.com or call (123) 456-7890.";
+            //     } else if (/services|offer/.test(message)) {
+            //         return "We offer a range of services including consulting, development, and support.";
+            //     } else if (/name/.test(message)) {
+            //         return "I'm a simple chatbot designed to assist you.";
+            //     } else if (/joke|funny/.test(message)) {
+            //         return "Why don't scientists trust atoms? Because they make up everything!";
+            //     } else {
+            //         return "I'm not sure I understand. Could you rephrase that or ask something else?";
+            //     }
+            // }
+            
+            // Initialize with minimized state
+            toggleChatbot();
+        });
+    </script>
+
+<script src="index.js"></script>
+</body>
+</html>
+
+   
