@@ -4,9 +4,6 @@ FuelFlex is a responsive and user-friendly gym and fitness website designed for 
 
 ---
 
-## 🚀 Live Demo
-
-🌐 [Visit FuelFlex on Netlify](https://your-live-demo-link.netlify.app)
 
 ---
 
