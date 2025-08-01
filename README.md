@@ -1,6 +1,6 @@
 # 💪 FuelFlex – Modern Gym & Fitness Website
 
-FuelFlex is a responsive and user-friendly gym and fitness website designed for health enthusiasts. It offers gym information, trainer profiles, supplement details, and an integrated chatbot to guide users through workout-related queries. Built with clean code and scalable architecture, this project demonstrates real-world application potential.
+ FlexFuel  is a responsive and user-friendly gym and fitness website designed for health enthusiasts. It offers gym information, trainer profiles, supplement details, and an integrated chatbot to guide users through workout-related queries. Built with clean code and scalable architecture, this project demonstrates real-world application potential.
 
 ---
 
